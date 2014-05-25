@@ -1,5 +1,19 @@
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+  
+
+    window.onscroll = function (e){
+        if(window.pageYOffset > 600){
+            $('.scroll-top').fadeIn();
+        }else{
+            $('.scroll-top').fadeOut(500, function(){
+                $(this).css({
+                    'opacity': 0.5
+                });
+            });   
+        }
+    };
+
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({

@@ -1,7 +1,7 @@
 .navbar-default {
 background-color: #f1c40f;
 }
-section, section.success{color: #000; background: #fff;}
+section, section.success{color: rgb(26, 36, 47); background: #fff;}
 header {
 	color: rgb(0, 0, 0);
 	background: rgb(255, 255, 255);
@@ -10,10 +10,86 @@ header {
 	font-weight: normal;
 	text-transform: none;
 }
+.navbar>.container .navbar-brand:hover, .navbar>.container-fluid .navbar-brand:hover{
+	color:rgb(26, 36, 47);
+}
+.navbar-default .navbar-nav>li>a:hover{color: rgb(26, 36, 47);}
 header .intro-text .name {
 	font-weight: normal;
 	text-transform: none;
 }
 .fa-plane{font-size: 15em;}
-hr.star-primary{border-color: #000;}
-hr.star-primary:after{color: #f1c40f;};
+hr.star-primary{border-color: rgb(26, 36, 47);}
+hr.star-primary:after{color: #f1c40f;}
+
+/* Les Packs */
+.container a.item-pack{
+	background-color: #ecf0f1;
+	min-height: 250px;
+	display: block;
+	color: rgb(26, 36, 47);
+	border: 7px solid rgb(26, 36, 47);
+	border-radius: 4px;
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+header .container a.item-pack:hover{
+	text-decoration: none;
+	border-color: #f1c40f;
+}
+header .item-pack .name{
+	display: block;
+	text-transform: uppercase;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	height: 236px;
+	line-height: 236px;
+}
+header .operation-plus{
+	height: 250px;
+	line-height: 315px;
+}
+header .operation-plus .fa-plus{font-size: 6em;}
+header .item-result{
+	padding: 50px 0 0 0;
+	font-size: 3em;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+header #subscribe-form input#email{
+	width: 50%;
+	display: inline;
+	padding-right: 30px;
+}
+header #subscribe-form input[type="submit"]{
+	margin-top: -4.55px;
+	margin-left: -30px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	-o-border-bottom-left-radius: 0;
+	-o-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	padding: 18.2px 27px;
+	background-color: #f1c40f;
+	border-color: #f1c40f;
+	color: rgb(26, 36, 47);
+}
+.portfolio-item .portfolio-link img{border: 1px solid rgb(220, 228, 236);}
+.scroll-top{
+	display: none;
+    width: inherit;
+}
+.scroll-top:hover{opacity: 1!important;}
+.scroll-top .btn{
+	width: 100%;
+	border-radius: 4px;
+	font-size: 15px;
+}
+
+
+
+
