@@ -78,7 +78,7 @@ header #subscribe-form input[type="submit"]{
 	border-color: #f1c40f;
 	color: rgb(26, 36, 47);
 }
-.portfolio-item .portfolio-link img{border: 1px solid rgb(220, 228, 236);}
+.pack-item .pack-link img{border: 1px solid rgb(220, 228, 236);}
 .scroll-top{
 	display: none;
     width: inherit;
