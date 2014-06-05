@@ -4,9 +4,9 @@ require 'vendor/autoload.php';
 
 //Manage content flash message
 define("MESSAGE", serialize(array(
-    "sent"        => "Super ! Un mail vous a été envoyé afin de bien confirmer votre adresse e-mail.",
-    "invalid"     => "Oups, votre e-mail n'est pas valide.",
-    "empty"       => "Vous devez vous indiquer votre e-mail. Merci.",
+    "sent"        => "Super ! Un mail vous a été envoyé afin de bien confirmer votre adresse mail.",
+    "invalid"     => "Oups, votre adresse mail n'est pas valide.",
+    "empty"       => "Vous devez nous indiquer votre e-mail. Merci.",
     "already_sub" => "Ah... bonne nouvelle vous êtes déjà inscrit ou déjà membre de l'association."
 )));
 
