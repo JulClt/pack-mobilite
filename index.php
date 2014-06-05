@@ -1,3 +1,56 @@
+<?php 
+    
+require 'vendor/autoload.php';
+
+//Manage content flash message
+define("MESSAGE", serialize(array(
+    "sent"        => "Super ! Un mail vous a été envoyé afin de bien confirmer votre adresse e-mail.",
+    "invalid"     => "Oups, votre e-mail n'est pas valide.",
+    "empty"       => "Vous devez vous indiquer votre e-mail. Merci.",
+    "already_sub" => "Ah... bonne nouvelle vous êtes déjà inscrit ou déjà membre de l'association."
+)));
+
+//AERP list ID
+define("AERP_ID", 'da02a34338');
+
+//API Connection
+$mc = new Mailchimp('127f6d0850de5528f4b9b4703ae01b03-us4');
+
+if(isset($_POST['email'])){
+    
+    extract($_POST);
+    $message = unserialize(MESSAGE);
+
+    if (!empty($_POST['email'])){
+        $error = '';
+        //Check email
+        if (preg_match("/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/", $email)){
+            
+            //Send email to MailChimp
+            try {
+                $mc->lists->subscribe(AERP_ID, array('email'=>$email));
+                
+                //Flash message : E-mail sent to the list!
+                $flash = '<p class="flash email-valid">'.$message['sent'].'</p>';
+            } catch (Mailchimp_Error $e) {
+                //If already subscribed 
+                if ($e->getCode() === 214)
+                    $flash = '<p class="flash email-valid">'.$message['already_sub'].'</p>';
+            }
+        }else{
+            $helpError = true; // Set input email value with the incorrect email
+            
+            //Flash message error (invalid mail)
+            $flash = '<p class="flash email-error">'.$message['invalid'].'</p>';
+        }
+    } else {
+        //Flash message error (empty field)
+        $flash = '<p class="flash email-error">'.$message['empty'].'</p>';
+    }
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,10 +142,11 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="subscribe-form" action="">
-                        <input type="text" name="email" id="email" class="input-lg form-control" placeholder="Mon adresse mail">
+                    <form id="subscribe-form" action="index.php" method="post">
+                        <input value="<?php if($helpError) echo $email; ?>" type="text" name="email" id="email" class="input-lg form-control" placeholder="Mon adresse mail">
                         <input type="submit" class="btn btn-primary btn-lg" value="Y accéder !">
                     </form>
+                    <?php if($flash) echo $flash; ?>
                 </div>
             </div>
         </div>

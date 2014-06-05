@@ -89,7 +89,9 @@ header #subscribe-form input[type="submit"]{
 	border-radius: 4px;
 	font-size: 15px;
 }
-
+.flash{margin-top: 10px;}
+.email-error{color:#c0392b;}
+.email-valid{color: #27ae60;}
 
 
 
