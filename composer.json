@@ -1,0 +1,13 @@
+{
+    "name": "mailchimp/api",
+    "description": "MailChimp API",
+    "require": {
+        "mailchimp/mailchimp": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Julien",
+            "email": "julien.collet01@gmail.com"
+        }
+    ]
+}
