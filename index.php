@@ -285,7 +285,7 @@ if(isset($_POST['email'])){
                             <div class="caption-content">
                                 Vous avez envie <strong>d'initier, de participer ou de diriger
                                 des projets innovants</strong> pour les Réunionnais ? L'AERP n'hésite pas à mobiliser
-                                ses membres pour améliorer la vie ds étudiants réunionnais à Paris.
+                                ses membres pour améliorer la vie des étudiants réunionnais à Paris.
                             </div>
                         </div>
                         <img src="img/pack-integration/aerp.png" class="img-responsive" alt="" />
