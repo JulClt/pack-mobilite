@@ -28,8 +28,12 @@ hr.star-primary:after{color: #f1c40f;}
 	min-height: 250px;
 	display: block;
 	color: rgb(26, 36, 47);
-	border: 7px solid rgb(26, 36, 47);
+	border: 4px solid rgb(26, 36, 47);
 	border-radius: 4px;
+	overflow: hidden;
+	padding:0;
+	height:300px;
+	position: relative;
 	-webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -40,16 +44,21 @@ header .container a.item-pack:hover{
 }
 header .item-pack .name{
 	display: block;
+	position:absolute;
+	width:392px;
+	bottom:120px;
+	color:#fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+	text-align: center;
 	text-transform: uppercase;
 	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 2em;
 	font-weight: 700;
-	height: 236px;
-	line-height: 236px;
 }
+header .item-pack img{margin:0;}
 header .operation-plus{
 	height: 250px;
-	line-height: 315px;
+	line-height: 375px;
 }
 header .operation-plus .fa-plus{font-size: 6em;}
 header .item-result{

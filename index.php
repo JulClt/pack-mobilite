@@ -119,21 +119,15 @@ if(isset($_POST['email'])){
                 <div class="col-sm-1"></div>
                 <a href="#pack-mobilite" class="col-sm-4 item-pack">
                     <span class="name">Pack Mobilité</span>
+                    <img src="img/mobilite/mobilite-1.png">
                 </a>
                 <div class="col-sm-2 operation-plus">
                     <i class="fa fa-plus"></i>
                 </div>
                 <a href="#pack-toulezour" class="col-sm-4 item-pack">
                     <span class="name">Pack Toulezour</span>
+                    <img src="img/toulezour/toulezour-1.png">
                 </a>
-                <!-- <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <i class="fa fa-plane"></i>
-                        <span class="name">Facilitez votre mobilité.</span>
-                        <span class="skills">Facilitez votre logement, votre emploi, vos études... le tout dans un seul et unique <strong>pack mobilité</strong>.</span>
-                    </div>
-                </div> -->
             </div>
             <div class="row">
                 <div class="col-lg-12 item-result">
