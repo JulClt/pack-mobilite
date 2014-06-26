@@ -7,7 +7,7 @@ define("MESSAGE", serialize(array(
     "sent"        => "Super ! Un mail vous a été envoyé afin de bien confirmer votre adresse mail.",
     "invalid"     => "Oups, votre adresse mail n'est pas valide.",
     "empty"       => "Vous devez nous indiquer votre e-mail. Merci.",
-    "already_sub" => "Ah... bonne nouvelle vous êtes déjà inscrit ou déjà membre de l'association."
+    "already_sub" => "Bonne nouvelle vous êtes déjà inscrit ou déjà membre de l'association. Dirigez-vous vers <a style='text-decoration:underline;' href='http://aerp.fr'>le site de l'AERP</a>"
 )));
 
 //AERP list ID
@@ -94,7 +94,7 @@ if(isset($_POST['email'])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">L'AERP vous présente...</a>
+                <a class="navbar-brand" href="#page-top">L'Association des Etudiants Réunionnais de Paris</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -104,7 +104,7 @@ if(isset($_POST['email'])){
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="http://www.aerp.fr">Aller sur le site</a>
+                        <!-- <a href="http://www.aerp.fr">Aller sur le site</a> -->
                     </li>
                 </ul>
             </div>
@@ -115,32 +115,39 @@ if(isset($_POST['email'])){
 
     <header>
         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 item-result">
+                    <span> Simplifiez votre mobilité et <br> Appréciez votre quotidien sur Paris.</span>
+                </div>
+            </div>
             <div class="row page-scroll">
                 <div class="col-sm-1"></div>
                 <a href="#pack-mobilite" class="col-sm-4 item-pack">
-                    <span class="name">Pack Mobilité</span>
+                    <div class="title">
+                        <span class="name">Pack Mobilité</span>
+                        <span class="button-discover">Découvrir</span>
+                    </div>
                     <img src="img/mobilite/mobilite-1.png">
                 </a>
                 <div class="col-sm-2 operation-plus">
-                    <i class="fa fa-plus"></i>
+                    &
                 </div>
                 <a href="#pack-toulezour" class="col-sm-4 item-pack">
-                    <span class="name">Pack Toulezour</span>
+                    <div class="title">
+                        <span class="name">Pack Toulezour</span>
+                        <span class="button-discover">Découvrir</span>
+                    </div>
                     <img src="img/toulezour/toulezour-1.png">
                 </a>
             </div>
             <div class="row">
-                <div class="col-lg-12 item-result">
-                    <span> Un Réunionnais au TOP à Paris</span>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-12">
                     <form id="subscribe-form" action="index.php" method="post">
+                        <p>Si vous n'êtes pas encore membre de l'association, laissez-nous votre e-mail afin de profiter des packs.</p>
+                        <?php if($flash) echo $flash; ?>
                         <input value="<?php if($helpError) echo $email; ?>" type="text" name="email" id="email" class="input-lg form-control" placeholder="Mon adresse mail">
-                        <input type="submit" class="btn btn-primary btn-lg" value="Y accéder !">
+                        <input type="submit" class="btn btn-primary btn-lg" value="Adhérer à l'association">
                     </form>
-                    <?php if($flash) echo $flash; ?>
                 </div>
             </div>
         </div>
@@ -298,11 +305,15 @@ if(isset($_POST['email'])){
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>
+                    L'AERP est une association qui accueille et accompagne les étudiants et jeunes actifs réunionnais
+                    sur Paris et sa région. Notre mission : <strong>simplifier votre mobilité et vous faire apprécier votre
+                    quotidien sur Paris !</strong>
+                    A travers ces « Packs », nous vous offrons une gamme de solutions complètes pour répondre à
+                    l'ensemble de vos besoins : logement, transport, démarches, et plus tard, activités, réseautage et
+                    insertion professionnelle. Vous n'êtes pas seuls : nous sommes là pour vous guider!
+                    </p>
                 </div>
             </div>
         </div>

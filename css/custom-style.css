@@ -4,8 +4,11 @@ background-color: #f1c40f;
 section, section.success{color: rgb(26, 36, 47); background: #fff;}
 header {
 	color: rgb(0, 0, 0);
-	background: rgb(255, 255, 255);
+	background-color: #fff;
 }
+header .container {padding-top: 60px;}
+.navbar>.container .navbar-brand{float: none; font-size: 1.6em;}
+.navbar>.container .navbar-header{float: none; text-align: center;}
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
 	font-weight: normal;
 	text-transform: none;
@@ -13,6 +16,8 @@ header {
 .navbar>.container .navbar-brand:hover, .navbar>.container-fluid .navbar-brand:hover{
 	color:rgb(26, 36, 47);
 }
+.navbar-fixed-top.navbar-shrink{padding: 20px 0;}
+.navbar-default .navbar-nav>li>a{font-size: 12px;}
 .navbar-default .navbar-nav>li>a:hover{color: rgb(26, 36, 47);}
 header .intro-text .name {
 	font-weight: normal;
@@ -42,11 +47,10 @@ header .container a.item-pack:hover{
 	text-decoration: none;
 	border-color: #f1c40f;
 }
+header .container a.item-pack:hover .button-discover{
+	text-decoration: underline;
+}
 header .item-pack .name{
-	display: block;
-	position:absolute;
-	width:392px;
-	bottom:120px;
 	color:#fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
 	text-align: center;
@@ -55,21 +59,37 @@ header .item-pack .name{
 	font-size: 2em;
 	font-weight: 700;
 }
+header .item-pack .title{
+	position:absolute;
+	width:392px;
+	bottom:120px;
+}
+header .item-pack .button-discover{
+	display: block;
+	font-size: 0.8em;
+	color: #fff;
+}
 header .item-pack img{margin:0;}
 header .operation-plus{
 	height: 250px;
-	line-height: 375px;
+	line-height: 290px;
+	font-size: 5.5em;
 }
 header .operation-plus .fa-plus{font-size: 6em;}
 header .item-result{
 	padding: 50px 0 0 0;
-	font-size: 3em;
+	margin-bottom: 50px;
+	font-size: 2.5em;
 	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+header #subscribe-form{
+	margin-top: 50px;
 }
 header #subscribe-form input#email{
 	width: 50%;
 	display: inline;
 	padding-right: 30px;
+	background-color: rgb(220, 228, 236);
 }
 header #subscribe-form input[type="submit"]{
 	margin-top: -4.55px;
@@ -86,6 +106,14 @@ header #subscribe-form input[type="submit"]{
 	background-color: #f1c40f;
 	border-color: #f1c40f;
 	color: rgb(26, 36, 47);
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+
+}
+header #subscribe-form input[type="submit"]:hover{
+	background-color: rgb(215, 170, 15);
+	border-color: rgb(231, 186, 15);
 }
 .pack-item .pack-link img{border: 1px solid rgb(220, 228, 236);}
 .scroll-top{
