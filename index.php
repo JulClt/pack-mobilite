@@ -52,7 +52,7 @@ if(isset($_POST['email'])){
  ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -276,7 +276,7 @@ if(isset($_POST['email'])){
                                 comme des visites, conférences et autres tournois sportifs.
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="" />
+                        <img src="img/pack-integration/vieparisienne.png" class="img-responsive" alt="" />
                     </a>
                 </div>
                 <div class="col-sm-4 pack-item">

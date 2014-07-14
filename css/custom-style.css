@@ -115,6 +115,13 @@ header #subscribe-form input[type="submit"]:hover{
 	background-color: rgb(215, 170, 15);
 	border-color: rgb(231, 186, 15);
 }
+.pack-item .name{
+	background: rgb(220, 228, 236);
+	color: rgb(255, 255, 255);
+	padding: 5px 7px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
 .pack-item .pack-link img{border: 1px solid rgb(220, 228, 236);}
 .scroll-top{
 	display: none;
@@ -130,5 +137,17 @@ header #subscribe-form input[type="submit"]:hover{
 .email-error{color:#c0392b;}
 .email-valid{color: #27ae60;}
 
+/*
+* Thank you page
+*/
 
+.step h2{font-size: 2.2em; text-transform: none;}
+#thankyou #adhesion-step{
+	margin-top: 50px;
+}
+#adhesion-step p{margin: 10px 0 30px 0;}
+#adhesion-step form .col-xs-6, #adhesion-step form .col-xs-12{margin-bottom: 10px;}
+#adhesion-step form input[type="submit"]{
+	font-size: 1.5em;
+}
 
